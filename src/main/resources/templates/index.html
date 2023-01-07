@@ -1,11 +1,35 @@
-<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Chuck Norris Jokes</title>
+<title>Chuck Norris Jokes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- link rel="stylesheet" type="text/css" href="styles.css" /-->
+  <!-- link rel="stylesheet" th:type="templates" type="text/css" href="styles.css" -->
+  <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
 </head>
 <body>
-<h1>Chuck Norris Joke</h1>
-<p th:text="${joke}" >Show Joke here...</p>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  <!-- Begin Faux -->
+  <div id="faux">
+    <!-- Begin Left Column -->
+    <div id="left-column">
+      <h1>Chuck Norris Jokes</h1>
+      <p style="margin:8px 0;">Refresh the page to see the next joke!</p>
+      
+    </div>
+    <!-- End Left Column -->
+    <!-- Begin Right Column -->
+    <div id="right-column">
+      <p th:text="${joke}" style="margin:8px 0;">Show joke here...</p>
+      <ul style="margin:0 0 15px 0; padding:0; list-style-type:none;">
+        
+      </ul>
+    </div>
+    <!-- End Right Column -->
+    <div class="clear"> </div>
+  </div>
+  <!-- End Faux -->
+</div>
+<!-- End Wrapper -->
 </body>
 </html>
